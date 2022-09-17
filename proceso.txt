@@ -1,0 +1,23 @@
+clave=ingresoSecreto()
+#guarda la palabra secreta-letras sin repetirse- ejm, FUEGO
+numeroSecreto=creaDiccionario()
+#guarda la palabra secreta odrenada según el diccionario-diccionarioOrdenado, ejm {1: 2, 2: 5, 3: 1, 4: 3, 5: 4}  
+# {1:"F",2:"U",3:"E",4:"G",5:"O"} --->>> {1:"E",2:"F",3:"G",4:"O",5:"U"} = {1: 2, 2: 5, 3: 1, 4: 3, 5: 4} 
+mensaje=ingresoMensaje()
+#guarda el texto a cifrar en variable mensaje de tipo String,sin espacios,solo letras y con @ en caso de ser necesario
+#HOLAQUETALCOMOESTAS@
+mensajeLista=[]
+mensajeFinal=[]
+mensajeSegmentar()
+#recorre el texto a cifrar en segmentos del tamaño de la palabra secreta
+#esos segmentos se guardan en una variable tipo lista, mensajeLista
+#ejm, HOLAQ,UETAL,COMOE,STAS@
+#llama al metodo codificar-pasa del 1 al tamaño de la palabra secreta- la cantidad de veces el tamaño de la palabra secreta
+#El metodo codificar: recorre los segmentos y palabra secreta odrenada-según el diccionario-diccionarioOrdenado- y los machea
+# Ejm:
+ HOLAQ,UETAL,COMOE,STAS@ --->>> {1: 2, 2: 5, 3: 1, 4: 3, 5: 4} 
+#['L', 'T', 'M', 'A', 'H', 'U', 'C', 'S', 'A', 'A', 'O', 'S', 'Q', 'L', 'E', '@', 'O', 'E', 'O', 'T']
+#convierte de lista a str
+	print("Mensaje cifrado: ", "".join(mensajeFinal))
+#['L', 'T', 'M', 'A', 'H', 'U', 'C', 'S', 'A', 'A', 'O', 'S', 'Q', 'L', 'E', '@', 'O', 'E', 'O', 'T'] se convierte en LTMAHUCSAAOSQLE@OEOT
+#imprime el mensaje cifrado, ejm: LTMAHUCSAAOSQLE@OEOT
