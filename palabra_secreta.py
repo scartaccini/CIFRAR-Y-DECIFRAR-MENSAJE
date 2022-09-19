@@ -1,6 +1,8 @@
+from getpass import getpass
+
 def ingresoSecreto():	
 	while (True):
-		claveIngresada=input("Ingrese una palabra secreta (entre 4 y 8 letras, sin repetirlas) ").upper()
+		claveIngresada=getpass("Ingrese una palabra secreta (entre 4 y 8 letras, sin repetirlas) ").upper()
 		if (claveIngresada.isalpha()):
 			if (len(claveIngresada) >= 4 and len(claveIngresada) <= 8):
 				if len(set(claveIngresada))==len(claveIngresada):
@@ -13,3 +15,4 @@ def ingresoSecreto():
 		else:
 			print("La palabra secreta solo puede tener letras(A-Z)")
 ### guarda la palabra secreta-letras sin repetirse- en variable tipo String claveIngresada, ejm FUEGO
+#getpass,se usa para no mostrar lo que se ingresa
