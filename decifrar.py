@@ -1,4 +1,3 @@
-from pprint import pprint
 from palabra_secreta import ingresoSecreto
 from palabra_secreta_ordenada import creaDiccionario
 

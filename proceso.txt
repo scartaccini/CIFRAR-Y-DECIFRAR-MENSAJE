@@ -1,3 +1,5 @@
+------------cifra mensaje
+
 clave=ingresoSecreto()
 #guarda la palabra secreta-letras sin repetirse- ejm, FUEGO
 numeroSecreto=creaDiccionario()
@@ -21,3 +23,17 @@ mensajeSegmentar()
 	print("Mensaje cifrado: ", "".join(mensajeFinal))
 #['L', 'T', 'M', 'A', 'H', 'U', 'C', 'S', 'A', 'A', 'O', 'S', 'Q', 'L', 'E', '@', 'O', 'E', 'O', 'T'] se convierte en LTMAHUCSAAOSQLE@OEOT
 #imprime el mensaje cifrado, ejm: LTMAHUCSAAOSQLE@OEOT
+
+----------decifra mensaje
+mensajeFinal=input("Ingrese msj: ").upper()
+#recibe el mensajeFinal, LTMAHUCSAAOSQLE@OEOT
+decifrado[num]=mensajeFinal[desde:hasta*num]
+#se divide el mensajeFinal en frgamentos del tamaño de "desde" y se guarda en el diccionario decifrado, ejem: {1:"LTMA",2:"HUCS",3:"AAOS",4:"QLE@",5:"OEOT"}
+print(decifrado[numeroSecreto[c]])
+#recorre numeroSecreto e imprime decifrado según el orden de los valores de numeroSecreto 
+{1: 2, 2: 5, 3: 1, 4: 3, 5: 4} --->>> HUCS
+				      OEOT
+				      LTMA
+				      AAOS
+				      QLE@
+
