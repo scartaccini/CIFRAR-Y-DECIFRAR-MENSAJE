@@ -15,8 +15,32 @@ for num in range(1,len(clave)+1):
 	desde=hasta*num
 	
 for c,v in numeroSecreto.items():
-	print(decifrado[numeroSecreto[c]])
-	print("↓" * hasta)
+		#print(decifrado[numeroSecreto[c]])
+		#print("↓" * hasta)
+		#se mejora la forma de mostrar el mensaje descifrado
+		linea = decifrado[numeroSecreto[c]]
+		if (c == 1):
+			print("↓   ".join(linea) + "↓" )
+			print("")
+		else:	
+			print("    ".join(linea))
+			print("")
+
+		'''
+		
+		H↓   U↓   C↓   S↓
+
+		O    E    O    T
+
+		L    T    M    A
+
+		A    A    O    S
+
+		Q    L    E    @
+
+		'''
 	
+	
+
 	
 
